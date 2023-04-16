@@ -4,52 +4,36 @@ export const SequinceMemory = () => {
 
   const [level, setLevel] = useState(1)
 
-  const levelGenerator = (memoriseBoxesCount, boxes) => {
+  const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
-            'boxes': boxes}
+            'rows': rows,
+            'cols': cols,
+          }
   }
 
   const levels = {
-    1: levelGenerator(4, 9),
-    2: levelGenerator(5, 9),
-    3: levelGenerator(6, 9),
-    4: levelGenerator(4, 12),
-    5: levelGenerator(6, 12),
-    6: levelGenerator(8, 12),
-    7: levelGenerator(5, 15),
-    8: levelGenerator(8, 15),
+    1: levelGenerator(4, 3, 3),
+    2: levelGenerator(5, 3, 3),
+    3: levelGenerator(6, 3, 3),
+    4: levelGenerator(4, 4, 3),
+    5: levelGenerator(6, 4, 4),
+    6: levelGenerator(8, 4, 4),
+    7: levelGenerator(5, 5, 4),
+    8: levelGenerator(8, 5, 5),
   }
 
   return (
     <div>
-      <div className={styles.row}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </div>
+
+    <div className={styles.sequinceBox}>
+        {[...Array(levels[level].rows)].map((x, i) => {
+        return <div className={styles.row}>
+          {[...Array(levels[level].cols)].map((x, i) => {
+            return <div className={styles.card}></div>
+          }) }
+        </div>})}
     </div>
-    // <div className={styles.sequinceBox}>
-    //     {[...Array(levels[level].boxes)].map((x, i) =>
-    //       <h1>box</h1>)}
-    // </div>
+    </div>
+   
   )
 }
