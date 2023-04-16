@@ -3,13 +3,22 @@ import styles from './SequinceMemory.module.css'
 export const SequinceMemory = () => {
 
   const [level, setLevel] = useState(1)
-  const [memoriseOrder, setMemoriseOrder] = useState()
-  const [currentHighlight, setCurrentHighlight] = useState(1);
+  const [memoriseOrder, setMemoriseOrder] = useState([])
+  const [currentHighlight, setCurrentHighlight] = useState(null);
   const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
             'rows': rows,
             'cols': cols,
           }
+  }
+
+  const hightlightMemoriseBoxes = (numbers) => {
+    let timeOut = 500;
+    const timeOutBonus = 800;
+    for (let boxIndex of numbers) {
+      setTimeout(() => setCurrentHighlight(boxIndex), timeOut) 
+      timeOut += timeOutBonus
+    }
   }
 
   const createMemoriseOrder = () => {
@@ -27,6 +36,7 @@ export const SequinceMemory = () => {
     }
 
     setMemoriseOrder(numbers);
+    hightlightMemoriseBoxes(numbers);
   }
 
   function onBoxClick(boxIndex) {
