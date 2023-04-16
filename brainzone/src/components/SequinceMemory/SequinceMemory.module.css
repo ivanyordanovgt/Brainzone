@@ -3,4 +3,19 @@
     background-color: rgba(6, 197, 255, .5);
     height: 50vh;
     margin-top: 1vh;
+    display: inline-grid;
+    
+}
+
+.row {
+    text-align: center;
+    height: 90px;
+}
+
+.card {
+    display: inline-block;
+    width: 100px;
+    height: 90px;
+    border: 1px solid red;
+    background-color: gray;
 }

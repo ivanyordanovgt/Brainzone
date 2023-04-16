@@ -21,9 +21,35 @@ export const SequinceMemory = () => {
   }
 
   return (
-    <div className={styles.sequinceBox}>
-        {[...Array(levels[level].boxes)].map((x, i) =>
-          <h1>box</h1>)}
+    <div>
+      <div className={styles.row}>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+        <div className={styles.card}></div>
+      </div>
     </div>
+    // <div className={styles.sequinceBox}>
+    //     {[...Array(levels[level].boxes)].map((x, i) =>
+    //       <h1>box</h1>)}
+    // </div>
   )
 }
