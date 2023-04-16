@@ -1,14 +1,35 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import styles from './SequinceMemory.module.css'
 export const SequinceMemory = () => {
 
   const [level, setLevel] = useState(1)
-
+  const [memoriseOrder, setMemoriseOrder] = useState()
   const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
             'rows': rows,
             'cols': cols,
           }
+  }
+
+  const createMemoriseOrder = () => {
+    const levelData = levels[level]
+    const memoriseBoxesCount = levelData.memoriseBoxesCount
+    const numbers = [];
+    for (let i=0; i<memoriseBoxesCount; i++) {
+      const number = Math.floor(Math.random() * levelData.rows*levelData.cols)
+      if (numbers.includes(number)) {
+        i -= 1
+        continue;
+      }
+      numbers.push(number)
+      console.log(numbers)
+    }
+
+    setMemoriseOrder(numbers);
+  }
+
+  function onBoxClick(boxIndex) {
+    console.log(boxIndex)
   }
 
   const levels = {
@@ -23,16 +44,20 @@ export const SequinceMemory = () => {
   }
 
   return (
+    
     <div>
 
-    <div className={styles.sequinceBox}>
-        {[...Array(levels[level].rows)].map((x, i) => {
-        return <div className={styles.row}>
-          {[...Array(levels[level].cols)].map((x, i) => {
-            return <div className={styles.card}></div>
-          }) }
-        </div>})}
-    </div>
+      <div className={styles.sequinceBox}>
+          {[...Array(levels[level].rows)].map((x, rowIndex) => {
+          
+          return <div className={styles.row}>
+            {[...Array(levels[level].cols)].map((x, colIndex) => {
+              return <div className={styles.card} onClick={() => onBoxClick(rowIndex+rowIndex+colIndex+rowIndex)}></div>
+            }) }
+          </div>})}
+      </div>
+
+      <button onClick={createMemoriseOrder}>Start</button>
     </div>
    
   )
