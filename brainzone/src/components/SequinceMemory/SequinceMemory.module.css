@@ -18,3 +18,9 @@
     border: 1px solid red;
     background-color: gray;
 }
+
+.hightlight {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}

@@ -4,6 +4,7 @@ export const SequinceMemory = () => {
 
   const [level, setLevel] = useState(1)
   const [memoriseOrder, setMemoriseOrder] = useState()
+  const [currentHighlight, setCurrentHighlight] = useState(1);
   const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
             'rows': rows,
@@ -52,7 +53,9 @@ export const SequinceMemory = () => {
           
           return <div className={styles.row}>
             {[...Array(levels[level].cols)].map((x, colIndex) => {
-              return <div className={styles.card} onClick={() => onBoxClick(rowIndex+rowIndex+colIndex+rowIndex)}></div>
+              return <div className={styles.card} onClick={() => onBoxClick(rowIndex+rowIndex+colIndex+rowIndex)}>
+                {currentHighlight==rowIndex+rowIndex+colIndex+rowIndex ? <div className={styles.hightlight}></div>: ''}
+              </div>
             }) }
           </div>})}
       </div>
