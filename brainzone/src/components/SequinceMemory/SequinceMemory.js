@@ -1,11 +1,14 @@
 import React, { memo, useState } from 'react'
 import styles from './SequinceMemory.module.css'
+import useSound from 'use-sound';
+import dingSound from '../../audioFiles/dingSound.mp3'
 export const SequinceMemory = () => {
 
   const [level, setLevel] = useState(1)
   const [memoriseOrder, setMemoriseOrder] = useState([])
   const [currentHighlight, setCurrentHighlight] = useState(null);
   const [points, setPoints] = useState(0)
+  const [play] = useSound(dingSound)
   const [gamesHistory, setGamesHistory] = useState([]);
   const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
@@ -46,6 +49,7 @@ export const SequinceMemory = () => {
     if (boxIndex == memoriseOrder[0]) {
       memoriseOrder.shift();
       console.log('correct!')
+      play();
     }
 
     if (memoriseOrder.length == 0) {
