@@ -19,6 +19,7 @@ export const SequinceMemory = () => {
       setTimeout(() => setCurrentHighlight(boxIndex), timeOut) 
       timeOut += timeOutBonus
     }
+    setTimeout(() => setCurrentHighlight(999), 500+timeOutBonus*numbers.length)
   }
 
   const createMemoriseOrder = () => {
