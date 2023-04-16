@@ -5,6 +5,8 @@ export const SequinceMemory = () => {
   const [level, setLevel] = useState(1)
   const [memoriseOrder, setMemoriseOrder] = useState([])
   const [currentHighlight, setCurrentHighlight] = useState(null);
+  const [points, setPoints] = useState(0)
+  const [gamesHistory, setGamesHistory] = useState([]);
   const levelGenerator = (memoriseBoxesCount, rows, cols) => {
     return {'memoriseBoxesCount': memoriseBoxesCount, 
             'rows': rows,
@@ -41,7 +43,15 @@ export const SequinceMemory = () => {
   }
 
   function onBoxClick(boxIndex) {
-    console.log(boxIndex)
+    if (boxIndex == memoriseOrder[0]) {
+      memoriseOrder.shift();
+      console.log('correct!')
+    }
+
+    if (memoriseOrder.length == 0) {
+      setPoints(state => state+level)
+      createMemoriseOrder();
+    }
   }
 
   const levels = {
@@ -58,7 +68,7 @@ export const SequinceMemory = () => {
   return (
     
     <div>
-
+      <h1> Points: {points}</h1>
       <div className={styles.sequinceBox}>
           {[...Array(levels[level].rows)].map((x, rowIndex) => {
           
