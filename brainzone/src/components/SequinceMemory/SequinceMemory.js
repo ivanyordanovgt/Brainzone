@@ -77,8 +77,10 @@ export const SequinceMemory = () => {
 
   return (
     
-    <div>
+    <div >
       <h1> Points: {points}</h1>
+      <div className={styles.sequinceBoxWrapper}>
+
       <div className={styles.sequinceBox}>
           {[...Array(levels[level].rows)].map((x, rowIndex) => {
           
@@ -89,6 +91,7 @@ export const SequinceMemory = () => {
               </div>
             }) }
           </div>})}
+          </div>
       </div>
 
       <button onClick={createMemoriseOrder}>Start</button>

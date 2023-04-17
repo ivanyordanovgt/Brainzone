@@ -1,11 +1,14 @@
 
-.sequinceBox {
+.sequinceBoxWrapper {
     background-color: rgba(6, 197, 255, .5);
     height: 50vh;
     margin-top: 1vh;
     
+    
 }
-
+.sequinceBox {
+    padding-top: 6vh;
+}
 .row {
     text-align: center;
     height: 90px;
