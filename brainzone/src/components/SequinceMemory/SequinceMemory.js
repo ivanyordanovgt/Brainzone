@@ -48,20 +48,19 @@ export const SequinceMemory = () => {
   }
 
   function onBoxClick(boxIndex) {
-    if (boxIndex == memoriseOrder[0]) {
-      memoriseOrder.shift();
-      console.log('correct!')
-      playSuccessSound();
+
+    if (boxIndex != memoriseOrder[0]) {
+      playErrorSound();
       return
-    }
+    } 
+
+    playSuccessSound();
 
     if (memoriseOrder.length == 0) {
-      setPoints(state => state+level)
-      createMemoriseOrder();
-      return
+    setPoints(state => state+level)
+    createMemoriseOrder();
+    return
     }
-
-    playErrorSound();
   }
 
   const levels = {
