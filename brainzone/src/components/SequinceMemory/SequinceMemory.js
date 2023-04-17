@@ -55,6 +55,7 @@ export const SequinceMemory = () => {
     } 
 
     playSuccessSound();
+    memoriseOrder.shift();
 
     if (memoriseOrder.length == 0) {
     setPoints(state => state+level)
