@@ -8,6 +8,7 @@ export const SequinceMemory = () => {
   const [level, setLevel] = useState(1)
   const [memoriseOrder, setMemoriseOrder] = useState([])
   const [currentHighlight, setCurrentHighlight] = useState(null);
+  const [timeOutBonus, setTimeOutBonus] = useState(800);
   const [points, setPoints] = useState(0);
   const [playErrorSound] = useSound(errorSound);
   const [playSuccessSound] = useSound(successSound);
@@ -21,7 +22,6 @@ export const SequinceMemory = () => {
 
   const hightlightMemoriseBoxes = (numbers) => {
     let timeOut = 500;
-    const timeOutBonus = 800;
     for (let boxIndex of numbers) {
       setTimeout(() => setCurrentHighlight(boxIndex), timeOut) 
       timeOut += timeOutBonus
