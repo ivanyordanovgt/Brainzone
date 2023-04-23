@@ -10,3 +10,21 @@
 .waitingForClick {
     background-color: green;
 }
+
+.reactMessage {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.reactStateMessage {
+    font-size: 3vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 15vh;
+}
+
+.reactionTimeDiv span {
+    color: rgb(68, 29, 29);
+    font-size: 1.5vw;
+}
