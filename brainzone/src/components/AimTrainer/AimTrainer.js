@@ -1,7 +1,10 @@
 import React from 'react'
+import { Target } from './Target'
 
 export const AimTrainer = () => {
   return (
-    <div>AimTrainer</div>
+    <div>
+        <Target></Target>
+    </div>
   )
 }
