@@ -35,10 +35,7 @@ export const SequinceMemory = () => {
     const numbers = [];
     for (let i=0; i<memoriseBoxesCount; i++) {
       const number = Math.floor(Math.random() * levelData.rows*levelData.cols)
-      if (numbers.includes(number)) {
-        i -= 1
-        continue;
-      }
+      
       numbers.push(number)
       console.log(numbers)
     }
@@ -68,17 +65,18 @@ export const SequinceMemory = () => {
     1: levelGenerator(4, 3, 3),
     2: levelGenerator(5, 3, 3),
     3: levelGenerator(6, 3, 3),
-    4: levelGenerator(4, 4, 3),
-    5: levelGenerator(6, 4, 4),
-    6: levelGenerator(8, 4, 4),
-    7: levelGenerator(5, 5, 4),
-    8: levelGenerator(8, 5, 5),
+    4: levelGenerator(9, 3, 3),
+    5: levelGenerator(12, 3, 3),
+    6: levelGenerator(14, 3, 3),
+    7: levelGenerator(17, 3, 3),
+    8: levelGenerator(21, 3, 3),
   }
 
   return (
     
     <div >
       <h1> Points: {points}</h1>
+      <h1>Current level {level}; Boxes to memorise: {levels[level].memoriseBoxesCount}</h1>
       <input type='range' value={level} onChange={(e) => setLevel(Number(e.target.value))} min={1} max={Object.values(levels).length}></input>
       
       <div className={styles.sequinceBoxWrapper}>
