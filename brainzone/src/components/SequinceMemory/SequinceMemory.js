@@ -5,7 +5,7 @@ import successSound from '../../audioFiles/success.mp3'
 import errorSound from '../../audioFiles/error.mp3'
 export const SequinceMemory = () => {
 
-  const [level, setLevel] = useState(1)
+  const [level, setLevel] = useState(1);
   const [memoriseOrder, setMemoriseOrder] = useState([])
   const [currentHighlight, setCurrentHighlight] = useState(null);
   const [timeOutBonus, setTimeOutBonus] = useState(800);
@@ -79,6 +79,8 @@ export const SequinceMemory = () => {
     
     <div >
       <h1> Points: {points}</h1>
+      <input type='range' value={level} onChange={(e) => setLevel(Number(e.target.value))} min={1} max={Object.values(levels).length}></input>
+      
       <div className={styles.sequinceBoxWrapper}>
 
       <div className={styles.sequinceBox}>
