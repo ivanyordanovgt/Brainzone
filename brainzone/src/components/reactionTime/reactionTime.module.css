@@ -1,0 +1,12 @@
+
+.reactionTimeDiv {
+    width: 100%;
+    height: 60vh;
+    margin-top: 20vh;
+    background-color: rgba(104, 104, 188, 0.537);
+    flex: content;
+}
+
+.waitingForClick {
+    background-color: green;
+}
