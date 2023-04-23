@@ -10,8 +10,8 @@ export const ReactionTime = () => {
     const [points, setPoints] = useState(0);
 
     function reactionTimeStatistics(time) {
-        if (time > 300) return 'Worse than avarage';
-        if (time > 200) return 'Avarage';
+        if (time > 350) return 'Worse than avarage';
+        if (time > 220) return 'Avarage';
         if (time > 150) return 'Better than avarage';
         return "Insane reaction time!!"
     }

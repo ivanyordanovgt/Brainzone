@@ -7,6 +7,7 @@ export const HomePage = () => {
         Welcome !
         <Link to="/sequince">Sequince memory</Link>
         <Link to="/reaction-time">Reaction time</Link>
+        <Link to="/aim-trainer">Aim Trainer</Link>
     </div>
   )
 }
