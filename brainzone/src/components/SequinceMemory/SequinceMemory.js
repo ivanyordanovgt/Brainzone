@@ -22,8 +22,10 @@ export const SequinceMemory = () => {
 
   const hightlightMemoriseBoxes = (numbers) => {
     let timeOut = 500;
+    let timeBetweenDifferentHighlights = 80
     for (let boxIndex of numbers) {
       setTimeout(() => setCurrentHighlight(boxIndex), timeOut) 
+      setTimeout(() => setCurrentHighlight(999), timeOut-timeBetweenDifferentHighlights) 
       timeOut += timeOutBonus
     }
     setTimeout(() => setCurrentHighlight(999), 500+timeOutBonus*numbers.length)
