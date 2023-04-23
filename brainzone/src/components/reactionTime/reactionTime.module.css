@@ -28,3 +28,7 @@
     color: rgb(68, 29, 29);
     font-size: 1.5vw;
 }
+
+.waitingForGreen {
+    background-color: red;
+}

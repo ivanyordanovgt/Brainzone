@@ -39,11 +39,17 @@ export const ReactionTime = () => {
 
     return (
         <div>
-            <div onClick={onReactionDivClick} className={`${styles.reactionTimeDiv} ${ lookForClick ? styles.waitingForClick: 'nopent'}`}>
+            <div onClick={onReactionDivClick} className={`
+            ${styles.reactionTimeDiv} 
+            ${ lookForClick ? styles.waitingForClick: 'nopent'}
+            ${reactState&&!lookForClick ? styles.waitingForGreen: ''}`}>
             {reactionTime ? 
             <div className={styles.reactMessage}><h1>You reacted in {reactionTime}ms!</h1> 
             <span>{reactionTimeStatistics(reactionTime)}</span></div>
-            : ''}
+            : <div className={styles.reactMessage}>
+                <h1>Try to see how fast you can react!</h1>
+            </div>}
+            
             <h1 className={styles.reactStateMessage}>{reactState ? 'Click when it turns green!': 'Click to start!'}</h1>
             </div>
         </div>
