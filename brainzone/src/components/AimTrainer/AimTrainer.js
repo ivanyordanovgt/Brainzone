@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Target } from './Target'
 import styles from './aimTrainer.module.css'
+import useTimer from '../../hooks/timer'
 export const AimTrainer = () => {
   const [random, setRandom] = useState({
     'x': 700,
     'y': 50,
   })
+  const {startTimer, timePassed} = useTimer()
   const [roundTime, setRoundTime] = useState(5)
   const [points, setPoints] = useState(0)
   const [clickedOuterColor, setClickedOuterColor] = useState({
