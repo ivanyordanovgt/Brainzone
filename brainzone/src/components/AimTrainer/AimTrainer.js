@@ -11,7 +11,7 @@ export const AimTrainer = () => {
   function onTargetClick(outerColor, bonusPoints) {
     setPoints(p => p+bonusPoints)
     const [x, y] = [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 600)]
-    setRandom(state => ({x: x, y: y}))
+    setRandom({x: x, y: y})
     if (clickedOuterColor[outerColor]) {
       setClickedOuterColor(state => ({...state, [outerColor]: clickedOuterColor[outerColor]+1 }))
     } else {
