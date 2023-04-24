@@ -1,8 +1,41 @@
 
 .aimTrainer {
     width: 100%;
-    margin-top: 10vh;
     height: 60vh;
     position: relative;
     background-color: black;
+}
+
+.aimTrainer h2 {
+    color: rgb(193, 73, 73);
+    text-align: center;
+}
+
+.aimTrainer h3 {
+    color: rgba(241, 24, 24, 0.728);
+    text-align: center;
+}
+
+.stats {
+    height: 9vh;
+    background-color: rgba(0, 0, 0, 0.128);
+    margin: auto;
+    width: 30%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.stats h1 {
+    margin-left: 3vw;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: calc(1em + 1vw);;
+}
+
+.stats h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(.6em + .6vw);
+    margin-top: 6.5vh;
 }
