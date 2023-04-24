@@ -6,6 +6,7 @@ export const AimTrainer = () => {
     'x': 700,
     'y': 50,
   })
+  const [roundTime, setRoundTime] = useState(5)
   const [points, setPoints] = useState(0)
   const [clickedOuterColor, setClickedOuterColor] = useState({
     'red': 0,
@@ -14,6 +15,7 @@ export const AimTrainer = () => {
     'gold': 0,
     'black': 0,
   }) 
+
   function onTargetClick(outerColor, bonusPoints) {
     setPoints(p => p+bonusPoints)
     const [x, y] = [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 320)]
@@ -24,6 +26,13 @@ export const AimTrainer = () => {
       setClickedOuterColor(state => ({...state, [outerColor]: 1}))
     }
     console.log(clickedOuterColor)
+  }
+
+  function onRoundTimeChange(e) {
+    const value = Number(e.target.value)
+    if (value > 30 ) setRoundTime(30)
+    else if (value < -1) setRoundTime(5)
+    else setRoundTime(value)
   }
 
   return (
@@ -41,6 +50,8 @@ export const AimTrainer = () => {
         {points===0 ? <div>
           <h2>Click the target to start! </h2>
           <h2>Choose custom time if you want</h2>
+          <input type='number' value={roundTime} onChange={onRoundTimeChange}></input>
+          <span className={styles.second}>seconds</span>
           <h3>The closer to the center you click the more points you earn!</h3>
         </div>: ''}
 

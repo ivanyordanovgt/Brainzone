@@ -4,6 +4,7 @@
     height: 60vh;
     position: relative;
     background-color: black;
+    
 }
 
 .aimTrainer h2 {
@@ -31,6 +32,7 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: calc(1em + 1vw);;
+    
 }
 
 .stats h2 {
@@ -38,4 +40,21 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: calc(.6em + .6vw);
     margin-top: 6.5vh;
+}
+
+.aimTrainer input {
+    margin-left: 45vw;
+    font-size: calc(1vw + 1em);
+    width: 4vw;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+
+.second {
+    font-size: calc(1vw + 1em);
+    color: white;
+    margin-left: 0.5vw;
 }
