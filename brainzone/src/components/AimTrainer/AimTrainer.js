@@ -10,8 +10,11 @@ export const AimTrainer = () => {
     // if (clickedOuterColor[outerColor]) {
     //   setClickedOuterColor(state => )
     // }
-    const colorString = `${outerColor}`
-    setClickedOuterColor(state => ({...state, [outerColor]: `${outerColor}`}))
+    if (clickedOuterColor[outerColor]) {
+      setClickedOuterColor(state => ({...state, [outerColor]: clickedOuterColor[outerColor]+1 }))
+    } else {
+      setClickedOuterColor(state => ({...state, [outerColor]: 1}))
+    }
     console.log(clickedOuterColor)
   }
 
