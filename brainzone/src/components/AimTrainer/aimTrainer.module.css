@@ -58,3 +58,9 @@
     color: white;
     margin-left: 0.5vw;
 }
+
+.aimTrainer h4 {
+    color: white;
+    font-size: calc(1.4vw + 1.4em);
+    text-align: center;
+}

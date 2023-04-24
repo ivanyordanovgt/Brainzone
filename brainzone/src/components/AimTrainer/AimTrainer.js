@@ -2,14 +2,19 @@ import React, { useState } from 'react'
 import { Target } from './Target'
 import styles from './aimTrainer.module.css'
 import useTimer from '../../hooks/timer'
+
+
 export const AimTrainer = () => {
-  const [random, setRandom] = useState({
+  const defaultRandom = {
     'x': 700,
     'y': 50,
-  })
-  const {startTimer, timePassed} = useTimer()
-  const [roundTime, setRoundTime] = useState(5)
-  const [points, setPoints] = useState(0)
+  }
+  const [random, setRandom] = useState(defaultRandom);
+  const [gameStarted, setGameStarted] = useState(false);
+  const {startTimer, timePassed} = useTimer();
+  const [roundTime, setRoundTime] = useState(5);
+  const [points, setPoints] = useState(0);
+  const [secondsPassed, setSecondsPassed] = useState(0);
   const [clickedOuterColor, setClickedOuterColor] = useState({
     'red': 0,
     'blue': 0,
@@ -17,6 +22,21 @@ export const AimTrainer = () => {
     'gold': 0,
     'black': 0,
   }) 
+
+  function startGame() {
+    startTimer();
+    setGameStarted(true);
+    onTargetClick('white', 1);
+    const secondsInterval = setInterval(() => setSecondsPassed(s => s+1), 1000)
+    setClickedOuterColor({'red': 0,'blue': 0,'white': 0,'gold': 0,'black': 0})
+
+    setTimeout(() => {
+      setGameStarted(false)
+      setRandom(defaultRandom)
+      clearInterval(secondsInterval)
+      setSecondsPassed(0)
+    }, roundTime*1000)
+  }
 
   function onTargetClick(outerColor, bonusPoints) {
     setPoints(p => p+bonusPoints)
@@ -44,12 +64,12 @@ export const AimTrainer = () => {
         return <h1 style={{color: `${color}`}}>{String(entry)[0]}{entry.slice(-1)} </h1>
       })} 
       <h2>Current points {points ? points: '0'}</h2>
-
       </div>
 
       <div className={styles.aimTrainer}>
-        <h1>1</h1>
-        {points===0 ? <div>
+        <h4>{gameStarted ? `${secondsPassed}s`: ''}</h4>
+          
+          {!gameStarted ? <div>
           <h2>Click the target to start! </h2>
           <h2>Choose custom time if you want</h2>
           <input type='number' value={roundTime} onChange={onRoundTimeChange}></input>
@@ -58,7 +78,7 @@ export const AimTrainer = () => {
         </div>: ''}
 
         <div style={{marginLeft: random.x, marginTop: random.y}}>
-        <Target onClick={onTargetClick}></Target>
+        <Target onClick={!gameStarted ? startGame: onTargetClick}></Target>
         </div>
       </div>
     </div>
