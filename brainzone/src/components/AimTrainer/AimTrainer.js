@@ -31,7 +31,7 @@ export const AimTrainer = () => {
   function onRoundTimeChange(e) {
     const value = Number(e.target.value)
     if (value > 30 ) setRoundTime(30)
-    else if (value < -1) setRoundTime(5)
+    else if (value < 5) setRoundTime(5)
     else setRoundTime(value)
   }
 
