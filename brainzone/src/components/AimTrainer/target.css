@@ -4,8 +4,8 @@
 .target {
   display: grid;
   border: 1px solid black;
-  height: 10vh;
-  width: 5vw;
+  height: 12vh;
+  width: 6vw;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
 }
