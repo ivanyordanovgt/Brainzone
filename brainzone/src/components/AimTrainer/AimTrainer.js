@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Target } from './Target'
-
+import styles from './aimTrainer.module.css'
 export const AimTrainer = () => {
   const [random, setRandom] = useState({
     'x': 100,
@@ -21,7 +21,7 @@ export const AimTrainer = () => {
   }
 
   return (
-    <div>
+    <div className={styles.aimTrainer}>
         {points ? `Current points ${points}`: `Click start to begin!`}
         <div style={{marginLeft: random.x, marginTop: random.y}}>
         <Target onClick={onTargetClick}></Target>

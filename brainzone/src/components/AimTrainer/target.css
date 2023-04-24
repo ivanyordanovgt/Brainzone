@@ -70,7 +70,7 @@
   transform: rotate(45deg);
 }
 
-div {
+.target div {
   border-radius: 50%;
 }
 
