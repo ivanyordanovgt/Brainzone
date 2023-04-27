@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from './components/homePage/HomePage';
 import { ReactionTime } from './components/reactionTime/ReactionTime';
 import { AimTrainer } from './components/AimTrainer/AimTrainer';
+import { OddsTrainer } from './components/OddsTrainer/OddsTrainer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/sequince" element={<SequinceMemory/>}/>
         <Route path="/reaction-time" element={<ReactionTime/>}/>
         <Route path="/aim-trainer" element={<AimTrainer/>}/>
+        <Route path="/odds-trainer" element={<OddsTrainer/>}/>
         
       </Routes>
       </BrowserRouter>
