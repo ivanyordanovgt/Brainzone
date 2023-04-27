@@ -4,7 +4,7 @@ import image from '../../../../images/cardImages/Diamonds/3.png'
 export const ChooseCard = () => {
   const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
   const [cards, setCards] = useState([{'url': randomCard('red'), 'state': 'no'}, {'url': randomCard('black'), 'state': 'no'}]);
-
+  const [message, setMessage] = useState('');
   function randomInt(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
@@ -31,16 +31,27 @@ export const ChooseCard = () => {
     return `${cardType}/${cardNumber}.png`
   }
 
+  function onCardClick(ev) {
+    console.log(ev.target.id)
+    if (ev.target.id == 'win') {
+      setMessage('You won!')
+    } else {
+      setMessage("WRONG, GIVE ME UR MONEY ")
+    }
+  }
+
   return (
     <div>
+      <h1>{message}</h1>
       <div className={styles.cards}>
         {cards.map((card) => {
             return <img 
+            onClick={onCardClick}
             src={require(`../../../../images/cardImages/${card.url}`)}
-            win={card.state=='win' ? true: false}
+            id={card.state}
             ></img>
         })}
-      <button onClick={() => generateCards(2)}>Refresh</button>
+      <button onClick={() => generateCards(3)}>Refresh</button>
       </div>
       
     </div>
