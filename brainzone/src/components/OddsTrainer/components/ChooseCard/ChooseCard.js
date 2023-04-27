@@ -9,7 +9,7 @@ export const ChooseCard = () => {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
-  function generateCardOdds(cardsCount) {
+  function generateCards(cardsCount) {
     const cardsStates = Array(cardsCount).fill('lose');
     const cardsObjList = [];
     const winningNumber = randomInt(0, cardsCount-1)
@@ -40,7 +40,7 @@ export const ChooseCard = () => {
             win={card.state=='win' ? true: false}
             ></img>
         })}
-      <button onClick={() => generateCardOdds (2)}>Refresh</button>
+      <button onClick={() => generateCards(2)}>Refresh</button>
       </div>
       
     </div>
