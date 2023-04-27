@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const OddsTrainer = () => {
-  return (
-    <div>OddsTrainer</div>
-  )
+
+    const [money, setMoney] = useState(1000);
+
+    return (
+        <div>OddsTrainer</div>
+    )
 }
