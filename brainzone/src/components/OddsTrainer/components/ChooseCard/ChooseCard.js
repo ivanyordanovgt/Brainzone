@@ -8,6 +8,7 @@ import { MoneyContext } from '../../contexts/MoneyContext'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
   const [currentWin, setCurrentWin] = useState(0);
+  const [bet, setBet] = useState(0)
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
@@ -18,7 +19,14 @@ export const ChooseCard = () => {
   const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
 
 
-  
+  function onBetChange(e) {
+    const num = Number(e.target.value);
+    if (num < money) {
+      setBet(num)
+    }
+
+  }
+
   function randomInt(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
@@ -49,9 +57,11 @@ export const ChooseCard = () => {
     console.log(ev.target.id)
     if (ev.target.id == 'win') {
       setMessage('WIN')
-      setCurrentWin(state => state+100)
+      setMoney(state => state + bet*cardsAmount)
+      setCurrentWin(state => bet*cardsAmount)
     } else {
       setMessage("LOSE")
+      setMoney(state => state - bet)
       setCurrentWin(0)
     }
 
@@ -66,8 +76,9 @@ export const ChooseCard = () => {
   return (
     <div className={styles.chooseCardMainDiv}>
       <div className={styles.winInfo}> 
+              <input value={bet} onChange={onBetChange}></input>
               <h1>Money: {money}</h1>
-              <h1>Cashout: {currentWin}</h1>
+              <h1>LAST WIN: {currentWin}</h1>
             </div>
 
       <div className={styles.cards}>
