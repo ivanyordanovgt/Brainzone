@@ -6,8 +6,6 @@ import { CrashGamble } from './components/CrashGamble/CrashGamble';
 
 export const OddsTrainer = () => {
 
-    const [money, setMoney] = useState(1000);
-
     return (
         <div>
             <h1>Can you beat the odds ?</h1>

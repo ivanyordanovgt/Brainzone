@@ -108,7 +108,7 @@ export const ChooseCard = () => {
             )}
 
         </div>
-          <button className={styles.cashoutBtn}>Cashout</button>
+          <button className={styles.cashoutBtn}><span>$$$</span> Upgrades <span>$$$</span></button>
         </div>: ''}
 
       </div>

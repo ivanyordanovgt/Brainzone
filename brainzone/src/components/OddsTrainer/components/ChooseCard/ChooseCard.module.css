@@ -74,7 +74,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: auto;
     border: 3px solid rgb(0, 0, 0);
     padding: 10px;
-    margin-left: 47%;
+    margin-left: 40%;
+    margin-top: 5vh;
     font-family:'Brush Script MT', cursive;
     font-size: calc(1.4vw + 1.4em);
     cursor:pointer;
@@ -117,6 +118,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     position: absolute;
     left: 10vw;
     animation:  horizontal-shaking .3s infinite;
+}
+
+.chooseCardMainDiv span {
+    color: green;
 }
 
 @keyframes horizontal-shaking {
