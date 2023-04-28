@@ -49,3 +49,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-family:'Brush Script MT', cursive;
     margin-left: 4vw;
 }
+
+.guessCardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.guessCardDiv img {
+    width: 12vw;
+    margin-left: 2vw;
+
+}

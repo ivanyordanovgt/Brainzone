@@ -69,13 +69,14 @@ export const ChooseCard = () => {
           </div>
            
         </div>: ''}
-        {cards.map((card) => {
-            return <img 
+        <div className={styles.guessCardDiv}>
+            {cards.map((card) => {
+            return <div className={styles.item}><img 
             onClick={onCardClick}
             src={require(`../../../../images/cardImages/${card.url}`)}
             id={card.state}
-            ></img>
-        })}
+            ></img></div>
+        })}</div>
       </div>
       
     </div>
