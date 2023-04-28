@@ -15,7 +15,7 @@ function multiply(a, b) {
     return a*b
 }
 
-export default mathOperators = {
+export const mathOperators = {
     '-': substract,
     '+': add,
     '/': devide,
