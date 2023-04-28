@@ -21,6 +21,7 @@ function App() {
         <Route path="/odds-trainer/*" element={<OddsTrainerUrls/>}/>
         
       </Routes>
+      
       </BrowserRouter>
     </div>
   );

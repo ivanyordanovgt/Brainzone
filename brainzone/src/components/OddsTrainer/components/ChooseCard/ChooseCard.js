@@ -61,7 +61,12 @@ export const ChooseCard = () => {
       setCurrentWin(state => bet*cardsAmount)
     } else {
       setMessage("LOSE")
-      setMoney(state => state - bet)
+      if (money-bet<0) {alert('You lost all your money! We gift you 1000$ to keep playing <3'); setMoney(1000)}
+      else {
+        setCurrentWin(0)
+        setMoney(state => state-bet)
+      }
+      
       setCurrentWin(0)
     }
 
