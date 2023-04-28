@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './ChooseCard.module.css'
 import diamondImg from '../../../../images/cardImages/Diamonds/3.png'
 import clubsImg from '../../../../images/cardImages/Clubs/J.png'
 import jokerImg from '../../../../images/cardImages/Jokers/Joker_1.png'
 import { OddsBox } from './OddsBox'
+import { MoneyContext } from '../../contexts/MoneyContext'
 export const ChooseCard = () => {
-  const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
+  const {money, setMoney} = useContext(MoneyContext)
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
@@ -13,6 +14,10 @@ export const ChooseCard = () => {
   const [cardsAmount, setCardsAmount] = useState(0)
   const [cards, setCards] = useState([]);
   const [message, setMessage] = useState('');
+  const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
+
+
+  
   function randomInt(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
@@ -60,7 +65,7 @@ export const ChooseCard = () => {
       <h1>{message}</h1>
       <div className={styles.cards}>
         {cards.length <= 0 ? <div>
-          <h1>Welcome</h1>
+          <h1>Welcome {money}</h1>
           <h1>Choose odds</h1>
           <div className={styles.oddsChoice}>
             {oddsChoices.map((oddInfo) => {
