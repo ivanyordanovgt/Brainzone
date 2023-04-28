@@ -7,6 +7,7 @@ import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
+  const {currentWin, setCurrentWin} = useState(0)
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
@@ -74,14 +75,19 @@ export const ChooseCard = () => {
           </div>
            
         </div>: ''}
-        <div className={styles.guessCardDiv}>
+        {cards.length > 0 ? <div><div className={styles.guessCardDiv}>
             {cards.map((card) => {
             return <div className={styles.item}><img 
             onClick={onCardClick}
             src={require(`../../../../images/cardImages/${card.url}`)}
             id={card.state}
-            ></img></div>
-        })}</div>
+            ></img></div>}
+            )}
+
+        </div>
+          <button className={styles.cashoutBtn}>Cashout</button>
+        </div>: ''}
+
       </div>
       
     </div>

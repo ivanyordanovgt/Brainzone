@@ -69,3 +69,24 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .guessCardDiv img:hover {
     border: 5px solid indianred;
 }
+
+.cashoutBtn {
+    margin: auto;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin-left: 47%;
+    font-family:'Brush Script MT', cursive;
+    font-size: calc(1.4vw + 1.4em);
+    cursor:pointer;
+    transition: background-color 1s ease-out 100ms
+
+}
+
+.cashoutBtn:hover {
+    background-color: brown;
+}
+
+@keyframes fillBackground {
+    from {background-color: rgb(255, 249, 249);}
+    to {background-color: brown;}
+}

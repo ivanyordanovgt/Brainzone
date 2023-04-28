@@ -13,9 +13,9 @@ export const OddsTrainerUrls = () => {
         <div>
         <MoneyContext.Provider value={{money: money, 'setMoney': setMoney}}>
             <Routes>
-                    <Route path="card-war" element={<CardWar/>}></Route>
-                    <Route path="choose-card" element={<ChooseCard/>}></Route>
-                    <Route path="crash-gamble" element={<CrashGamble/>}></Route>
+                <Route path="card-war" element={<CardWar/>}></Route>
+                <Route path="choose-card" element={<ChooseCard/>}></Route>
+                <Route path="crash-gamble" element={<CrashGamble/>}></Route>
             </Routes>
         </MoneyContext.Provider>
         </div>
