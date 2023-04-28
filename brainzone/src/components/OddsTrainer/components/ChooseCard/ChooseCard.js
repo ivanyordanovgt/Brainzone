@@ -7,7 +7,7 @@ import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
-  const {currentWin, setCurrentWin} = useState(0)
+  const [currentWin, setCurrentWin] = useState(0)
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
@@ -48,9 +48,9 @@ export const ChooseCard = () => {
   function onCardClick(ev) {
     console.log(ev.target.id)
     if (ev.target.id == 'win') {
-      setMessage('You won!')
+      setMessage('WIN')
     } else {
-      setMessage("WRONG, GIVE ME UR MONEY ")
+      setMessage("LOSE")
     }
 
     generateCards(cardsAmount);
@@ -63,10 +63,15 @@ export const ChooseCard = () => {
 
   return (
     <div className={styles.chooseCardMainDiv}>
-      <h1>{message}</h1>
+      <div className={styles.winInfo}> 
+              <h1>Money: {money}</h1>
+              <h1>Cashout: {currentWin}</h1>
+            </div>
+
       <div className={styles.cards}>
+
         {cards.length <= 0 ? <div>
-          <h1>Welcome {money}</h1>
+          <h1>Welcome</h1>
           <h1>Choose odds</h1>
           <div className={styles.oddsChoice}>
             {oddsChoices.map((oddInfo) => {
@@ -75,7 +80,12 @@ export const ChooseCard = () => {
           </div>
            
         </div>: ''}
-        {cards.length > 0 ? <div><div className={styles.guessCardDiv}>
+        {cards.length > 0 ? <div>
+          <div className={styles.guessCardDiv}>
+          <div className={styles.winMessage}>
+            <h1>{message}</h1>
+          </div>
+
             {cards.map((card) => {
             return <div className={styles.item}><img 
             onClick={onCardClick}
