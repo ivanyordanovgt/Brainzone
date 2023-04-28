@@ -19,7 +19,6 @@ export const ChooseCard = () => {
 
   function generateCards(cardsAmount) {
     const cardsStates = Array(cardsAmount).fill('lose');
-    console.log(cardsAmount, '1111111111111111111111111')
     const cardsObjList = [];
     const winningNumber = randomInt(0, cardsAmount-1)
     cardsStates[winningNumber] = 'win'
