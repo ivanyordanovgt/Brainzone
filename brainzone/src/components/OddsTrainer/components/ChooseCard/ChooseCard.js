@@ -7,7 +7,7 @@ import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
-  const [currentWin, setCurrentWin] = useState(0)
+  const [currentWin, setCurrentWin] = useState(0);
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
@@ -49,8 +49,10 @@ export const ChooseCard = () => {
     console.log(ev.target.id)
     if (ev.target.id == 'win') {
       setMessage('WIN')
+      setCurrentWin(state => state+100)
     } else {
       setMessage("LOSE")
+      setCurrentWin(0)
     }
 
     generateCards(cardsAmount);
@@ -82,8 +84,8 @@ export const ChooseCard = () => {
         </div>: ''}
         {cards.length > 0 ? <div>
           <div className={styles.guessCardDiv}>
-          <div className={styles.winMessage}>
-            <h1>{message}</h1>
+          <div className={currentWin>0 ? styles.winMessage: styles.loseMessage}>
+            <h1 >{message}</h1>
           </div>
 
             {cards.map((card) => {
