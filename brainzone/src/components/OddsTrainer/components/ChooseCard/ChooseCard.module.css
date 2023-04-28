@@ -92,7 +92,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     to {background-color: brown;}
 }
 
-.winInfo h1, input {
+.winInfo h1, .betInput {
     color: indianred;
     font-size: 1.5vw;
     float: right;
@@ -101,6 +101,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .winInfo {
     padding-top: 2vh;
+}
+
+.winInfo .betInput input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid black;
+    color: rgb(255, 140, 0);
+    font-size: calc(.55vw + .55em);
+    margin-left: 1.3vw;
+    width: 12vw;
+}
+
+.betInput input:focus {
+    outline: none;
+    border-bottom: 3px solid rgb(83, 4, 4);
+    font-size: calc(.64vw + .64em);
 }
 
 .winMessage h1 {

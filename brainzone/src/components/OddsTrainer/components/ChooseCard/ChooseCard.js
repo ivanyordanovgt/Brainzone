@@ -78,11 +78,15 @@ export const ChooseCard = () => {
 
   return (
     <div className={styles.chooseCardMainDiv}>
-      <div className={styles.winInfo}> 
-              <input value={bet} onChange={onBetChange}></input>
-              <h1>Money: {money}</h1>
-              <h1>LAST WIN: {currentWin}</h1>
-            </div>
+      <div className={styles.winInfo}>
+
+        <div className={styles.betInput}>
+          <label>Bet amount</label> 
+          <input value={bet} onChange={onBetChange}></input>
+        </div>
+        <h1>Money: {money}</h1>
+        <h1>LAST WIN: {currentWin}</h1>
+      </div>
 
       <div className={styles.cards}>
 
