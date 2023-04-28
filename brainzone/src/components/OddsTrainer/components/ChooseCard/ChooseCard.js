@@ -9,7 +9,8 @@ import { randomInt } from '../../../../utils/randomNumber'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
   const [currentWin, setCurrentWin] = useState(0);
-  const [bet, setBet] = useState(0)
+  const [bet, setBet] = useState(0);
+  const [showUpgrades, setShowUpgrades] = useState(false);
   const [oddsChoices, setOddsChoices] = useState([
     {imgUrl: clubsImg, text:'50/50', cards: 2}, 
     {imgUrl: diamondImg, text:'70/30', cards: 3}, 
