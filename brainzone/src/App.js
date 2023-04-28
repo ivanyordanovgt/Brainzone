@@ -8,6 +8,7 @@ import { AimTrainer } from './components/AimTrainer/AimTrainer';
 import { OddsTrainer } from './components/OddsTrainer/OddsTrainer';
 import { OddsTrainerUrls } from './components/OddsTrainer/OddsTrainerUrls';
 import { MathTrainer } from './components/MathTrainer/MathTrainer';
+import AuthUrls from './components/auth/AuthUrls';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/math-trainer" element={<MathTrainer/>}/>
         <Route path="/odds-trainer" element={<OddsTrainer/>}/>
         <Route path="/odds-trainer/*" element={<OddsTrainerUrls/>}/>
+        <Route path="/auth/*" element={<AuthUrls/>}/>
         
       </Routes>
       
