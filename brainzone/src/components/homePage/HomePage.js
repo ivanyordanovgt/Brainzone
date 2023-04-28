@@ -9,6 +9,7 @@ export const HomePage = () => {
         <Link to="/reaction-time">Reaction time</Link>
         <Link to="/aim-trainer">Aim Trainer</Link>
         <Link to="/odds-trainer">Luck Trainer</Link>
+        <Link to="/math-trainer">Math Trainer</Link>
     </div>
   )
 }
