@@ -5,6 +5,7 @@ import clubsImg from '../../../../images/cardImages/Clubs/J.png'
 import jokerImg from '../../../../images/cardImages/Jokers/Joker_1.png'
 import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
+import { randomInt } from '../../../../utils/randomNumber'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
   const [currentWin, setCurrentWin] = useState(0);
@@ -27,9 +28,6 @@ export const ChooseCard = () => {
 
   }
 
-  function randomInt(min, max) {  
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
 
   function generateCards(cardsAmount) {
     const cardsStates = Array(cardsAmount).fill('lose');
