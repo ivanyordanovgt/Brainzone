@@ -55,7 +55,7 @@ export const ChooseCard = () => {
     console.log(ev.target.id)
     if (ev.target.id == 'win') {
       setMessage('WIN')
-      setMoney(state => state + bet*cardsAmount)
+      setMoney(state => state + bet*cardsAmount/1.5)
       setCurrentWin(state => bet*cardsAmount)
     } else {
       setMessage("LOSE")
