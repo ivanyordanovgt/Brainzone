@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import styles from './ChooseCard.module.css'
-import image from '../../../../images/cardImages/Diamonds/3.png'
+import diamondImg from '../../../../images/cardImages/Diamonds/3.png'
+import ClubsImg from '../../../../images/cardImages/Clubs/J.png'
+import jokerImg from '../../../../images/cardImages/Jokers/Joker_1.png'
+import { OddsBox } from './OddsBox'
 export const ChooseCard = () => {
   const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
-  const [cards, setCards] = useState([{'url': randomCard('red'), 'state': 'no'}, {'url': randomCard('black'), 'state': 'no'}]);
+  const [cards, setCards] = useState([]);
   const [message, setMessage] = useState('');
   function randomInt(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -41,9 +44,19 @@ export const ChooseCard = () => {
   }
 
   return (
-    <div>
+    <div className={styles.chooseCardMainDiv}>
       <h1>{message}</h1>
       <div className={styles.cards}>
+        {!cards.length ? <div>
+          <h1>Welcome</h1>
+          <h1>Choose odds</h1>
+          <div className={styles.oddsChoice}>
+            <OddsBox cardUrl={diamondImg} text={'50/50'}/> 
+            <OddsBox cardUrl={ClubsImg} text={'30/70'}/> 
+            <OddsBox cardUrl={jokerImg} text={'20/80'}/> 
+          </div>
+           
+        </div>: ''}
         {cards.map((card) => {
             return <img 
             onClick={onCardClick}
