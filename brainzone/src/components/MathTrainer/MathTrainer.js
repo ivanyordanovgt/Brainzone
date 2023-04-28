@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { randomInt } from '../../utils/randomNumber'
 import { mathOperators } from '../../utils/math'
-
+import styles from './mathTrainer.module.css'
 export const MathTrainer = () => {
 
     const [answer, setAnswer] = useState();
@@ -22,14 +22,19 @@ export const MathTrainer = () => {
 
   return (
     <div>
-        {message}
-        {Object.keys(mathOperators).map((sign) => {
-            return <button onClick={() => setProblemType(sign)}>{sign}</button>
-        })}
-        <button onClick={() => generateProblem(1)}>click</button>
-        <input type='number' value={userAnswer} onChange={(e) => setUserAnswer(Number(e.target.value))}></input>
-        <button onClick={checkAnswer}>Check answer</button>
+        <div className={styles.mathDiv}>
+            {message}
+            {Object.keys(mathOperators).map((sign) => {
+                return <button onClick={() => setProblemType(sign)}>{sign}</button>
+            })}
+            <button onClick={() => generateProblem(1)}>click</button>
         
+                
+        </div>
+        <div className={styles.mathDiv}>
+            <input type='number' value={userAnswer} onChange={(e) => setUserAnswer(Number(e.target.value))}></input>
+            <button onClick={checkAnswer}>Check answer</button>
+        </div>
     </div>
   )
 }
