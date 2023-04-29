@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styles from './ChooseCard.module.css'
 import diamondImg from '../../../../images/cardImages/Diamonds/3.png'
-import clubsImg from '../../../../images/cardImages/Clubs/J.png'
+import clubsImg from '../../../../images/cardImages/Clubs/11.png'
 import jokerImg from '../../../../images/cardImages/Jokers/Joker_1.png'
 import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
