@@ -79,8 +79,8 @@ export const ChooseCard = () => {
 
   return (
     <div className={styles.chooseCardMainDiv}>
+      {cards.length>0 ? <button className={styles.goBackBtn} onClick={() => setCards([])}>{`<-`}</button>: ''}
       <div className={styles.winInfo}>
-
         <div className={styles.betInput}>
           <label>Bet amount</label> 
           <input value={bet} onChange={onBetChange}></input>
@@ -114,9 +114,11 @@ export const ChooseCard = () => {
             id={card.state}
             ></img></div>}
             )}
+            
 
         </div>
           <button className={styles.cashoutBtn}><span>$$$</span> Upgrades <span>$$$</span></button>
+          
         </div>: ''}
 
       </div>

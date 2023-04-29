@@ -70,7 +70,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border: 5px solid indianred;
 }
 
-.cashoutBtn {
+.cashoutBtn, .goBackBtn {
     margin: auto;
     border: 3px solid rgb(0, 0, 0);
     padding: 10px;
@@ -82,6 +82,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     transition: background-color 1s ease-out 100ms
 
 }
+
+.goBackBtn {
+    float: left;
+    position: absolute;
+    margin-left: 5%;
+    font-size: calc(1vw + 1em);
+}
+
 
 .cashoutBtn:hover {
     background-color: brown;
