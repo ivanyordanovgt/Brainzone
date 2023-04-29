@@ -48,7 +48,7 @@ export const ChooseCard = () => {
 
   function randomCard(color) {
     const cardType = cardTypes[color][randomInt(0, 1)];
-    const cardNumber = randomInt(2, 10);
+    const cardNumber = randomInt(2, 14);
     return `${cardType}/${cardNumber}.png`
   }
 
