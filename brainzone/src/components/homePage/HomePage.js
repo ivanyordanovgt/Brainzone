@@ -6,6 +6,17 @@ export const HomePage = () => {
     <div>
         Welcome !
         <div className={styles.sequinceMemory}>
+          <div className={styles.squares}>
+          <div className={styles.squareLayer1}>
+              <div className={styles.square}></div>
+              <div className={styles.square}></div>
+            </div>
+            <div className={styles.squareLayer2}>
+              <div className={styles.square}></div>
+              <div className={styles.filledSquare}></div>
+            </div>
+          
+          </div>
           <Link to="/sequince">Sequince memory</Link>
 
         </div>
