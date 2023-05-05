@@ -40,3 +40,13 @@
 a {
     text-decoration: none;
 }
+
+.reactionTime img {
+    width: 5vw;
+    
+}
+
+.reactionTime {
+    text-align: center;
+}
+

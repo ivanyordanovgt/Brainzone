@@ -21,8 +21,13 @@ export const HomePage = () => {
 
         </div>
 
-        <div>
+        <div className={styles.reactionTime}>
+          <div>
+          <img src='https://cdn-icons-png.flaticon.com/512/2675/2675949.png'></img>
+
+          </div>
           <Link to="/reaction-time">Reaction time</Link>
+
         </div>
         <div>
           <Link to="/aim-trainer">Aim Trainer</Link>
