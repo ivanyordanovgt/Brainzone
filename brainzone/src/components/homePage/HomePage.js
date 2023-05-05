@@ -6,13 +6,23 @@ export const HomePage = () => {
     <div>
         Welcome !
         <div className={styles.sequinceMemory}>
+          <Link to="/sequince">Sequince memory</Link>
 
         </div>
-        <Link to="/sequince">Sequince memory</Link>
-        <Link to="/reaction-time">Reaction time</Link>
-        <Link to="/aim-trainer">Aim Trainer</Link>
-        <Link to="/odds-trainer">Luck Trainer</Link>
-        <Link to="/math-trainer">Math Trainer</Link>
+
+        <div>
+          <Link to="/reaction-time">Reaction time</Link>
+        </div>
+        <div>
+          <Link to="/aim-trainer">Aim Trainer</Link>
+        </div>
+        <div>
+          <Link to="/odds-trainer">Luck Trainer</Link>
+        </div>
+        <div>
+          <Link to="/math-trainer">Math Trainer</Link>
+
+        </div>
     </div>
   )
 }
