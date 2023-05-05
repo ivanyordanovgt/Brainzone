@@ -35,10 +35,16 @@ export const HomePage = () => {
           </div>
           <Link to="/aim-trainer">Aim Trainer</Link>
         </div>
-        <div>
+        <div className={styles.luckTrainer}>
+          <div>
+            <img src='https://creazilla-store.fra1.digitaloceanspaces.com/icons/3261195/casino-icon-md.png'></img>
+          </div>
           <Link to="/odds-trainer">Luck Trainer</Link>
         </div>
-        <div>
+        <div className={styles.mathTrainer}>
+          <div>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZX36HQohB7LwMEibJKHMN0ZIZq2UJ4qNllg&usqp=CAU'></img>
+          </div>
           <Link to="/math-trainer">Math Trainer</Link>
 
         </div>

@@ -46,7 +46,15 @@ a {
     
 }
 
-.reactionTime {
+.luckTrainer img, .mathTrainer img {
+    width: 5vw;
+}
+
+.luckTrainer, .mathTrainer {
     text-align: center;
 }
+
+.reactionTime {
+    text-align: center;
+    }
 
