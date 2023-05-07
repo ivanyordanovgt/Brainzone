@@ -4,8 +4,6 @@ import styles from './homePage.module.css'
 export const HomePage = () => {
   return (
     <div className={styles.games}>
-        Welcome !
-
 
         <div className={styles.gamesRow}>
 
@@ -25,7 +23,8 @@ export const HomePage = () => {
 
           </div>
 
-          
+          <h1>Welcome</h1>
+
           <div className={`${styles.reactionTime}  ${styles.gamesLayer1}`}>
             <div>
             <img src='https://cdn-icons-png.flaticon.com/512/2675/2675949.png'></img>
@@ -33,7 +32,7 @@ export const HomePage = () => {
             </div>
             <Link to="/reaction-time">Reaction time</Link>
 
-          </div>
+            </div>
         </div>
 
         <div className={styles.gamesRow}>

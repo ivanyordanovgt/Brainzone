@@ -1,6 +1,5 @@
 .sequinceMemory {
     background-color: rgb(255, 255, 255);
-    margin-left: 5vw;
 
 }
 
@@ -11,8 +10,8 @@
 
 .squares {
     display: grid;
-    width: 7vw;
-    margin-left: 1.4vw;
+    width: 5vw;
+    margin-left: 1.6vw;
 
 }
 
@@ -27,7 +26,7 @@
 }
 
 .square, .filledSquare {
-    width: 2.6vw;
+    width: 2vw;
     height: 3vh;
     border: 3px solid rgb(52, 52, 99);
     margin-top: 1vh;
@@ -69,4 +68,12 @@ a {
     margin-left: 13vw;
     margin-top: 10vh;
     text-align: center;
+}
+
+.gamesRow h1 {
+    font-size: calc(2vw + 2em);
+    font-family:'Courier New', Courier, monospace;
+    margin-right: 1vw;
+    margin-top: 5vh;
+    color: indianred;
 }
