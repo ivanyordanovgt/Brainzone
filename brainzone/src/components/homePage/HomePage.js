@@ -6,7 +6,7 @@ export const HomePage = () => {
     <div className={styles.games}>
 
         <div className={styles.gamesRow}>
-
+          <Link to="/sequince">
           <div className={`${styles.sequinceMemory} ${styles.gamesLayer1}`}>
             <div className={styles.squares}>
             <div className={styles.squareLayer1}>
@@ -19,42 +19,52 @@ export const HomePage = () => {
               </div>
             
             </div>
-            <Link to="/sequince">Sequince memory</Link>
+            <h2>Sequince memory</h2>
 
           </div>
+          </Link>
 
           <h1>Welcome</h1>
 
+          <Link to="/reaction-time">
           <div className={`${styles.reactionTime}  ${styles.gamesLayer1}`}>
             <div>
             <img src='https://cdn-icons-png.flaticon.com/512/2675/2675949.png'></img>
 
             </div>
-            <Link to="/reaction-time">Reaction time</Link>
+            Reaction time
 
             </div>
+            </Link>
         </div>
 
         <div className={styles.gamesRow}>
-        <div className={`${styles.reactionTime} `}>
-          <div>
-            <img src='https://cdn-icons-png.flaticon.com/512/3265/3265254.png'></img>
+        <Link to="/aim-trainer">
+
+          <div className={`${styles.reactionTime} `}>
+            <div>
+              <img src='https://cdn-icons-png.flaticon.com/512/3265/3265254.png'></img>
+            </div>
+            <h2>Aim Trainer</h2>
           </div>
-          <Link to="/aim-trainer">Aim Trainer</Link>
-        </div>
+        </Link>
+        <Link to="/odds-trainer">
         <div className={`${styles.luckTrainer}`}>
           <div>
             <img src='https://creazilla-store.fra1.digitaloceanspaces.com/icons/3261195/casino-icon-md.png'></img>
           </div>
-          <Link to="/odds-trainer">Luck Trainer</Link>
+          <h2>Luck Trainer</h2>
         </div>
+        </Link>
+        <Link to="/math-trainer">
         <div className={`${styles.mathTrainer}`}>
           <div>
             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZX36HQohB7LwMEibJKHMN0ZIZq2UJ4qNllg&usqp=CAU'></img>
           </div>
-          <Link to="/math-trainer">Math Trainer</Link>
+          <h2>Math Trainer</h2>
 
         </div>
+        </Link>
         </div>
 
         
