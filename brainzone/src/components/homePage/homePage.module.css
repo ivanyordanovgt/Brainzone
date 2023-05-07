@@ -50,11 +50,23 @@ a {
     width: 5vw;
 }
 
-.luckTrainer, .mathTrainer {
-    text-align: center;
+
+
+
+.games {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 15vh;
 }
 
-.reactionTime {
-    text-align: center;
-    }
 
+
+
+.gamesRow {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin-left: 13vw;
+    margin-top: 10vh;
+    text-align: center;
+}
