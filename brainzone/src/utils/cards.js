@@ -1,10 +1,10 @@
+import { randomInt } from "./randomNumber";
 
 
-export function randomCard(color) {
+export function randomCard() {
+    const color = randomInt(0,1) % 2 ? 'red': 'black';
     const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
-    const cardType = cardTypes[color][Math.floor(Math.random() * (1 - 0 + 1) + 0)];
-    const min = 2;
-    const max = 14;
-    const cardNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    const cardType = cardTypes[color][randomInt(0, 1)];
+    const cardNumber = randomInt(2, 14);
     return `${cardType}/${cardNumber}.png`
   }

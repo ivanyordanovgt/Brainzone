@@ -19,7 +19,6 @@ export const ChooseCard = () => {
   const [cardsAmount, setCardsAmount] = useState(0)
   const [cards, setCards] = useState([]);
   const [message, setMessage] = useState('');
-  const cardTypes = {'red': ['Diamonds', 'Hearts'], 'black': ['Clubs', 'Spades']};
 
 
   function onBetChange(e) {
