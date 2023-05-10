@@ -16,7 +16,7 @@ export const OddsTrainer = () => {
         <div className={styles.rocketWrapper}>
             <h1>CRASH GAMBLE</h1>
           <div className={styles.rocketDiv}>
-                    {[...Array(20).keys()].map(() => {
+                    {[...Array(40).keys()].map(() => {
                         let x = Math.floor(Math.random() * window.innerWidth*0.32)
                         let h = Math.random() * 20;
                         let duration = Math.random() * 1 + 0.2;
@@ -38,6 +38,10 @@ export const OddsTrainer = () => {
             <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
             <h2>MID-RISK</h2>
         </div>
+        </div>
+
+        <div className={styles.cardChoice}>
+            <img src={cardImg}></img>
         </div>
         
         </>

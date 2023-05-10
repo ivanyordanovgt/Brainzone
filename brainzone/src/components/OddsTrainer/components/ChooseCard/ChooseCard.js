@@ -6,6 +6,7 @@ import jokerImg from '../../../../images/cardImages/Jokers/Joker_1.png'
 import { OddsBox } from './OddsBox'
 import { MoneyContext } from '../../contexts/MoneyContext'
 import { randomInt } from '../../../../utils/randomNumber'
+import { randomCard } from '../../../../utils/cards'
 export const ChooseCard = () => {
   const {money, setMoney} = useContext(MoneyContext)
   const [currentWin, setCurrentWin] = useState(0);
@@ -46,11 +47,7 @@ export const ChooseCard = () => {
     return cardsObjList
   }
 
-  function randomCard(color) {
-    const cardType = cardTypes[color][randomInt(0, 1)];
-    const cardNumber = randomInt(2, 14);
-    return `${cardType}/${cardNumber}.png`
-  }
+ 
 
   function onCardClick(ev) {
     console.log(ev.target.id)
