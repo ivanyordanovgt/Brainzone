@@ -7,87 +7,13 @@
     background-color: rgba(0,0,0);
 }
 
-.oddsGame {
-}
 
 .oddsGame img {
     width: 20vw;
     height: 50vh;
 }
 
-@keyframes vertical-shaking {
-    0% { transform: translateY(0) }
-    25% { transform: translateY(5px) }
-    50% { transform: translateY(-5px) }
-    75% { transform: translateY(5px) }
-    100% { transform: translateY(0) }
-  }
 
-.rocket {
-    animation: vertical-shaking 0.35s infinite;
-}
-
-
-
-.rocket img{
-    width: 5vw;
-    height: 13vh;
-}
-
-.rocket {
-    margin-top: 8vh;
-    margin-left: 13.3vw;
-}
-
-.rocket::before{
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 13.4%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 100px;
-    background: linear-gradient(rgb(0, 200, 255), transparent);
-
-}
-
-
-
-.rocket::after{
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 13.4%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 100px;
-    background: linear-gradient(rgb(255, 0, 0), transparent);
-    filter: blur(15px)
-}
-
-.rocketDiv i {
-    position: absolute;
-    top: -250px;
-    animation: animateStar linear infinite;
-    background: white;
-}
-
-.rocketWrapper {
-    position: relative;
-    width: 100%;
-    height: 40vh;
-    background-color: black;
-
-}
-
-.rocketWrapper h1 {
-    color: rgb(185, 23, 23);
-    text-align: center;
-    width: 100%;
-    background-color: wheat;
-    font-family: "Lucida Handwriting", cursive;
-
-}
 .rocketGameInfo {
     width: 30vw;
     text-align: center;
@@ -109,39 +35,3 @@
     width: 32%;
 
 }
-
-.cardChoice {
-    float: left;
-    margin-left: 10vw;
-    margin-top: 10vh;
-    width: 40vw;
-    text-align: center;
-    font-family: "Lucida Handwriting", cursive;
-    
-}
-
-.cardChoice h2 {
-    font-size: calc(2vw + 2vh);
-    color: indianred;   
-}
-
-.cardChoice img {
-    width: 12vw;
-    height: 40vh;
-    margin-left: 1vw;
-    border: 3px solid black;
-}
-
-
-
-
-@keyframes animateStar {
-     0%{
-        transform: translateY(0);
-     }
-
-     100% {
-        transform: translateY(35vh);
-     }
-}
-
