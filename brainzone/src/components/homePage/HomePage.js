@@ -54,6 +54,7 @@ export const HomePage = () => {
             <img src='https://creazilla-store.fra1.digitaloceanspaces.com/icons/3261195/casino-icon-md.png'></img>
           </div>
           <h2>Luck Trainer</h2>
+          <h2><span>MOST POPULAR</span></h2>
         </div>
         </Link>
         <Link to="/math-trainer">

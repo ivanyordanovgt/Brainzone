@@ -14,23 +14,23 @@
 
 
 .rocket img{
-    width: 5vw;
-    height: 13vh;
+    width: 8vw;
+    height: 16vh;
     position: relative;
 }
 
 .rocket {
-    margin-top: 8vh;
-    margin-left: 13.3vw;
+    margin-left: 50%;
+    
 }
 
 .rocket::before{
     content: '';
     position: absolute;
     bottom: -100px;
-    left: 13.4%;
+    left: 11.4%;
     transform: translateX(-50%);
-    width: 10px;
+    width: 1vw;
     height: 100px;
     background: linear-gradient(rgb(0, 200, 255), transparent);
 
@@ -42,11 +42,11 @@
     content: '';
     position: absolute;
     bottom: -100px;
-    left: 13.4%;
+    left: 11.4%;
     transform: translateX(-50%);
-    width: 20px;
-    height: 100px;
-    background: linear-gradient(rgb(255, 0, 0), transparent);
+    width: 3vw;
+    height: 14vh;
+    background: linear-gradient(rgb(0, 200, 255), transparent);
     filter: blur(15px)
 }
 
@@ -65,7 +65,7 @@
 .rocketWrapper {
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 90vh;
     background-color: black;
 
 }
@@ -96,7 +96,8 @@
     float: left;
     margin-top: 10vh;
     margin-left: 5vw;
-    width: 32%;
+    width: 70%;
+    float: right;
     height: 60vh;
 
 }
@@ -108,7 +109,7 @@
     }
 
     100% {
-       transform: translateY(35vh);
+       transform: translateY(85vh);
     }
 }
 
