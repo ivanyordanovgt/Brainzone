@@ -32,7 +32,7 @@ export const HomePage = () => {
             <img src='https://cdn-icons-png.flaticon.com/512/2675/2675949.png'></img>
 
             </div>
-            Reaction time
+            <h2>Reaction time</h2>
 
             </div>
             </Link>

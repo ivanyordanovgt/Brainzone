@@ -11,7 +11,7 @@
 .squares {
     display: grid;
     width: 5vw;
-    margin-left: 1.6vw;
+    margin-left: 2.6vw;
 
 }
 
@@ -76,4 +76,28 @@ a {
     margin-right: 1vw;
     margin-top: 5vh;
     color: indianred;
+}
+
+.gamesRow h2 {
+    color: black;
+}
+
+.gamesRow div:hover{
+}
+
+.luckTrainer:hover, .mathTrainer:hover, .reactionTime:hover, .sequinceMemory:hover {
+    background-color: rgba(0, 0, 0, 0.135);
+
+}
+
+.luckTrainer, .mathTrainer, .reactionTime, .sequinceMemory {
+    width: 10vw;
+    height: 15vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mathTrainer img, .reactionTime img {
+    width: 5vw;
+    height: 10vh;
+    margin-top: 1vh;
 }
