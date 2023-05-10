@@ -1,0 +1,96 @@
+
+.oddsGames {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 23vw;
+    background-color: rgba(0,0,0);
+}
+
+.oddsGame {
+}
+
+.oddsGame img {
+    width: 20vw;
+    height: 50vh;
+}
+
+@keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+  }
+
+.rocket {
+    animation: vertical-shaking 0.35s infinite;
+}
+
+
+
+.rocket img{
+    width: 5vw;
+    height: 13vh;
+}
+
+.rocket {
+    margin-top: 13vh;
+    margin-left: 10vw;
+}
+
+.rocket::before{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 12.6%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(rgb(0, 200, 255), transparent);
+
+}
+
+
+
+.rocket::after{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 12.8%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(rgb(0, 200, 255), transparent);
+    filter: blur(20px)
+}
+
+.rocketDiv i {
+    position: absolute;
+    top: -250px;
+    animation: animateStar linear infinite;
+    background: white;
+}
+
+.rocketWrapper {
+    position: relative;
+    width: 20%;
+    height: 40vh;
+    border: 3px solid red;
+    background-color: black;
+    margin-left: 20vw;
+    margin-top: 10vh;
+
+}
+
+
+
+@keyframes animateStar {
+     0%{
+        transform: translateY(0);
+     }
+
+     100% {
+        transform: translateY(70vh);
+     }
+}
