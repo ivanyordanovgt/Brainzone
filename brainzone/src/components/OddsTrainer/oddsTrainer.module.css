@@ -82,9 +82,27 @@
 
 }
 
+.rocketWrapper h1 {
+    color: rgb(185, 23, 23);
+    text-align: center;
+    width: 100%;
+    background-color: wheat;
+    font-family: "Lucida Handwriting", cursive;
+
+}
 .rocketGameInfo {
     float: left;
-    width: 15vw ;
+    width: 20vw;
+    text-align: center;
+    margin-top: 10vh;
+    font-family: "Lucida Handwriting", cursive;
+    color: black;
+}
+
+
+.rocketGameInfo h2 {
+    font-size: calc(2vw + 2vh);
+    color: indianred;
 }
 
 .rocketGameWrapper {
@@ -104,9 +122,3 @@
      }
 }
 
-.rocketWrapper h1 {
-    color: white;
-    text-align: center;
-    width: 100%;
-    background-color: wheat;
-}
