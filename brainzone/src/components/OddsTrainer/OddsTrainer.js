@@ -16,7 +16,7 @@ export const OddsTrainer = () => {
                 () => {
                     setCards([randomCard(), randomCard(), randomCard()])
                     console.log('interval!')
-                }, 1200)
+                }, 2000)
             return () => clearInterval(generateRandomCards)
         }, [])
     
@@ -54,8 +54,10 @@ export const OddsTrainer = () => {
         <div className={styles.cardChoice}>
             {[...Array(3).keys()].map(
                 (num, i) => <img src={require(`../../images/cardImages/${cards[i]}`)}></img>
-                
             )}
+            <h1>Try to choose the right card and win lots of money!</h1>
+            <h1>This game is perfect demonstration of how luck doens't exit and on the long run you will lose everything!</h1>
+            <h2>HIGHT-RISK</h2>
         </div>
         
         </>

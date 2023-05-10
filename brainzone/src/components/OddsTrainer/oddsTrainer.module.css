@@ -36,7 +36,7 @@
 
 .rocket {
     margin-top: 8vh;
-    margin-left: 12vw;
+    margin-left: 13.3vw;
 }
 
 .rocket::before{
@@ -89,7 +89,7 @@
 
 }
 .rocketGameInfo {
-    width: 20vw;
+    width: 30vw;
     text-align: center;
     margin-top: 1vh;
     font-family: "Lucida Handwriting", cursive;
@@ -113,11 +113,25 @@
 .cardChoice {
     float: left;
     margin-left: 10vw;
+    margin-top: 10vh;
+    width: 40vw;
+    text-align: center;
+    font-family: "Lucida Handwriting", cursive;
+    
+}
+
+.cardChoice h2 {
+    font-size: calc(2vw + 2vh);
+    color: indianred;   
 }
 
 .cardChoice img {
-    width: 10vw;
+    width: 12vw;
+    height: 40vh;
+    margin-left: 1vw;
+    border: 3px solid black;
 }
+
 
 
 
@@ -131,7 +145,3 @@
      }
 }
 
-
-body {
-    background-color: indianred;
-}
