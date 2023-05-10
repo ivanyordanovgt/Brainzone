@@ -74,11 +74,9 @@
 
 .rocketWrapper {
     position: relative;
-    float: left;
     width: 20%;
     height: 40vh;
     background-color: black;
-    margin-left: 5vw;
 
 }
 
@@ -91,12 +89,11 @@
 
 }
 .rocketGameInfo {
-    float: left;
     width: 20vw;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 1vh;
     font-family: "Lucida Handwriting", cursive;
-    color: black;
+    color: black;   
 }
 
 
@@ -107,6 +104,7 @@
 
 .rocketGameWrapper {
     margin-top: 10vh;
+    margin-left: 5vw;
 
 }
 

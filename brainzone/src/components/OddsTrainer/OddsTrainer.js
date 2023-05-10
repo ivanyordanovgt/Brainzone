@@ -12,11 +12,7 @@ export const OddsTrainer = () => {
     return (
         <>
         <div className={styles.rocketGameWrapper}>
-        <div className={styles.rocketGameInfo}>
-            <h1> trybetting on the outcome of a virtual "crash," </h1>
-            <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
-            <h2>MID-RISK</h2>
-        </div>
+        
         <div className={styles.rocketWrapper}>
             <h1>CRASH GAMBLE</h1>
           <div className={styles.rocketDiv}>
@@ -36,6 +32,11 @@ export const OddsTrainer = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.rocketGameInfo}>
+            <h1> trybetting on the outcome of a virtual "crash," </h1>
+            <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
+            <h2>MID-RISK</h2>
+        </div>
         </div>
         
         </>
