@@ -35,18 +35,18 @@
 }
 
 .rocket {
-    margin-top: 13vh;
-    margin-left: 10vw;
+    margin-top: 8vh;
+    margin-left: 7.3vw;
 }
 
 .rocket::before{
     content: '';
     position: absolute;
-    bottom: -200px;
-    left: 12.6%;
+    bottom: -100px;
+    left: 19.5%;
     transform: translateX(-50%);
     width: 10px;
-    height: 200px;
+    height: 100px;
     background: linear-gradient(rgb(0, 200, 255), transparent);
 
 }
@@ -56,11 +56,11 @@
 .rocket::after{
     content: '';
     position: absolute;
-    bottom: -200px;
-    left: 12.8%;
+    bottom: -100px;
+    left: 19.5%;
     transform: translateX(-50%);
-    width: 10px;
-    height: 200px;
+    width: 20px;
+    height: 100px;
     background: linear-gradient(rgb(0, 200, 255), transparent);
     filter: blur(20px)
 }
@@ -74,11 +74,20 @@
 
 .rocketWrapper {
     position: relative;
+    float: left;
     width: 20%;
     height: 40vh;
-    border: 3px solid red;
     background-color: black;
-    margin-left: 20vw;
+    margin-left: 5vw;
+
+}
+
+.rocketGameInfo {
+    float: left;
+    width: 15vw ;
+}
+
+.rocketGameWrapper {
     margin-top: 10vh;
 
 }
@@ -93,4 +102,11 @@
      100% {
         transform: translateY(70vh);
      }
+}
+
+.rocketWrapper h1 {
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: wheat;
 }
