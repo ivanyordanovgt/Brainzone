@@ -17,12 +17,13 @@ export const OddsTrainer = () => {
             <h1>CRASH GAMBLE</h1>
           <div className={styles.rocketDiv}>
                     {[...Array(20).keys()].map(() => {
-                        let x = Math.floor(Math.random() * window.innerWidth*0.27)
-                        let h = Math.random() * 90 + 10;
+                        let x = Math.floor(Math.random() * window.innerWidth*0.32)
+                        let h = Math.random() * 20;
                         let duration = Math.random() * 1 + 0.2;
                         return <i style={{
                             left: `${x}px`,
                             width: `1px`,
+                            top: '1px',
                             height: `${h}px`,
                             animationDuration: `${duration}s`
                         }}></i>
