@@ -22,9 +22,11 @@ export const OddsTrainer = () => {
     
     return (
         <>
+        
         <div className={styles.rocketGameWrapper}>
         
-        <div className={styles.rocketWrapper}>
+        <Link to={"crash-gamble"}>
+            <div className={styles.rocketWrapper}>
             <h1>CRASH GAMBLE</h1>
           <div className={styles.rocketDiv}>
                     {[...Array(40).keys()].map(() => {
@@ -44,6 +46,7 @@ export const OddsTrainer = () => {
                     </div>
                 </div>
             </div>
+        </Link>
             <div className={styles.rocketGameInfo}>
             <h1> trybetting on the outcome of a virtual "crash," </h1>
             <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
@@ -52,9 +55,11 @@ export const OddsTrainer = () => {
         </div>
 
         <div className={styles.cardChoice}>
-            {[...Array(3).keys()].map(
-                (num, i) => <img src={require(`../../images/cardImages/${cards[i]}`)}></img>
-            )}
+            <Link to="choose-card">
+                {[...Array(3).keys()].map(
+                    (num, i) => <img src={require(`../../images/cardImages/${cards[i]}`)}></img>
+                )}
+            </Link>
             <h1>Try to choose the right card and win lots of money!</h1>
             <h1>This game is perfect demonstration of how luck doens't exit and on the long run you will lose everything!</h1>
             <h2>HIGHT-RISK</h2>
