@@ -5,6 +5,7 @@ import rocket from '../../../../images/crashGame/rocket.png'
 
 export const CrashGamble = () => {
   return (
+    <>
         <div className={styles.rocketGameWrapper}>
             <div className={styles.rocketWrapper}>
             <h1>CRASH GAMBLE</h1>
@@ -25,9 +26,32 @@ export const CrashGamble = () => {
                     <div className={styles.rocket} style={{marginTop: '60vh', animationDuration: '1s'}}>
                         <img src={rocket}></img>
                     </div>
-                </div>
+              </div>
             </div>
            
         </div>
+
+        <div className={styles.betMenu}>
+          <label>bet input</label>
+          <div style={styles.placeBet}>
+            <input></input>
+            <div className={styles.betMultiplier}>
+
+            </div>
+          </div>
+
+          <div className={styles.cashout}>
+            <label>Cashout at</label>
+            <input></input>
+          </div>
+
+          <div className={styles.betProfit}></div>
+          <div className={styles.betHitsory}>
+            {[...Array(5).keys()].map(() => <>
+            <h1>test</h1>
+            </>)}
+          </div>
+        </div>
+    </>
   )
 }
