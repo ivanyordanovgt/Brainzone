@@ -1,0 +1,21 @@
+.cardChoice {
+    float: left;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    width: 40vw;
+    text-align: center;
+    font-family: "Lucida Handwriting", cursive;
+    
+}
+
+.cardChoice h2 {
+    font-size: calc(2vw + 2vh);
+    color: indianred;   
+}
+
+.cardChoice img {
+    width: 12vw;
+    height: 40vh;
+    margin-left: 1vw;
+    border: 3px solid black;
+}
