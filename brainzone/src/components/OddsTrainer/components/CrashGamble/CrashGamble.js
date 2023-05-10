@@ -32,20 +32,29 @@ export const CrashGamble = () => {
         </div>
 
         <div className={styles.betMenu}>
-          <label>bet input</label>
-          <div style={styles.placeBet}>
-            <input></input>
-            <div className={styles.betMultiplier}>
-
+        <div className={styles.betMultiplier}>
+          <div className={styles.multipliersWrapper}>
+              <h1>½</h1>
+              <h1>2x</h1>
+              <h1>max</h1>
+          </div>
+              
             </div>
+          <h1>bet input 0.0000000000BTC</h1>
+          <div className={styles.placeBet}>
+           
+            <img src='https://img.icons8.com/?size=512&id=13013&format=png' className={styles.moneyImg}></img>
+            <input type='number' min={0} placeholder='0.00' className={styles.betAmount}></input>
+           
           </div>
 
           <div className={styles.cashout}>
-            <label>Cashout at</label>
-            <input></input>
+            <h1>Cashout at</h1>
+            <input placeholder='1.01'></input>
           </div>
 
           <div className={styles.betProfit}></div>
+          <button className={styles.placeBetBtn}>Bet (Next Round)</button>
           <div className={styles.betHitsory}>
             {[...Array(5).keys()].map(() => <>
             <h1>test</h1>
