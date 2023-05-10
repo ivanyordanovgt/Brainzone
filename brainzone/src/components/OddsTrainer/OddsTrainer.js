@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom';
 import { CardWar } from './components/CardWar/CardWar';
 import { ChooseCard } from './components/ChooseCard/ChooseCard';
@@ -6,9 +6,20 @@ import { CrashGamble } from './components/CrashGamble/CrashGamble';
 import styles from './oddsTrainer.module.css';
 import cardImg from '../../images/cardImages/Jokers/Joker_2.png';
 import rocket from '../../images/crashGame/rocket.png'
+import { randomCard } from '../../utils/cards';
 export const OddsTrainer = () => {
 
-
+    const [cards, setCards] = useState([randomCard(), randomCard(), randomCard()])
+    useEffect(
+        () => {
+            const generateRandomCards = setInterval(
+                () => {
+                    setCards([randomCard(), randomCard(), randomCard()])
+                    console.log('interval!')
+                }, 1200)
+            return () => clearInterval(generateRandomCards)
+        }, [])
+    
     return (
         <>
         <div className={styles.rocketGameWrapper}>
@@ -41,7 +52,10 @@ export const OddsTrainer = () => {
         </div>
 
         <div className={styles.cardChoice}>
-            <img src={cardImg}></img>
+            {[...Array(3).keys()].map(
+                (num, i) => <img src={require(`../../images/cardImages/${cards[i]}`)}></img>
+                
+            )}
         </div>
         
         </>
