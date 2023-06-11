@@ -13,7 +13,7 @@ export const CrashGamble = () => {
                     {[...Array(40).keys()].map(() => {
                         let x = Math.floor(Math.random() * window.innerWidth*0.7)
                         let h = Math.random() * 20;
-                        let duration = Math.random() * 1 + 3;
+                        let duration = Math.random() * 2 + 1;
                         return <i style={{
                             left: `${x}px`,
                             width: `1px`,
@@ -32,14 +32,9 @@ export const CrashGamble = () => {
         </div>
 
         <div className={styles.betMenu}>
-        <div className={styles.betMultiplier}>
-          <div className={styles.multipliersWrapper}>
-              <h1>½</h1>
-              <h1>2x</h1>
-              <h1>max</h1>
-          </div>
-              
-            </div>
+        <div className={styles.betMenuContentWrapper}>
+
+       
           <h1>bet input 0.0000000000BTC</h1>
           <div className={styles.placeBet}>
            
@@ -52,15 +47,25 @@ export const CrashGamble = () => {
             <h1>Cashout at</h1>
             <input placeholder='1.01'></input>
           </div>
+          <div className={styles.betMultiplier}>
+          <div className={styles.multipliersWrapper}>
+              <h1>½ </h1>
+              <h1>2x </h1>
+              <h1 className={styles.last}>max</h1>
+          </div>
+              
+            </div>
 
-          <div className={styles.betProfit}></div>
           <button className={styles.placeBetBtn}>Bet (Next Round)</button>
           <div className={styles.betHitsory}>
-            {[...Array(5).keys()].map(() => <>
-            <h1>test</h1>
+            <h2>progkitten <span className={styles.multiplierSpan}>1.54x</span> <span className={styles.win}>BGN$1,923.3</span></h2>
+            {[...Array(17).keys()].map(() => <>
+            <h1><span className={styles.error}>ERROR!</span> user not found</h1>
             </>)}
           </div>
         </div>
+        </div>
+
     </>
   )
 }
