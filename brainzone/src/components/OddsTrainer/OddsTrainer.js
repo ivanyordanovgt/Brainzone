@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { Link, Route, Routes } from 'react-router-dom';
-import { CardWar } from './components/CardWar/CardWar';
-import { ChooseCard } from './components/ChooseCard/ChooseCard';
-import { CrashGamble } from './components/CrashGamble/CrashGamble';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import styles from './oddsTrainer.module.css';
-import cardImg from '../../images/cardImages/Jokers/Joker_2.png';
-import rocket from '../../images/crashGame/rocket.png'
-import { randomCard } from '../../utils/cards';
 import RocketAnimation from './components/RocketAnimation/RocketAnimation';
 import ChooseCardAnimation from './components/ChooseCardAnimation/ChooseCardAnimation';
 export const OddsTrainer = () => {
 
-    
     
     return (
         <>
@@ -22,6 +14,7 @@ export const OddsTrainer = () => {
                 <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
                 <h2>MID-RISK</h2>
             </div>
+            <button onClick={() => console.log(Math.round(window.devicePixelRatio * 100))}></button>
         </div>
 
         <ChooseCardAnimation>

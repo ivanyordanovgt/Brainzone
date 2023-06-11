@@ -50,6 +50,7 @@
     filter: blur(15px)
 }
 
+
 .rocketDiv i {
     position: absolute;
     top: -250px;
@@ -61,6 +62,7 @@
     position: absolute;
     left: 50%;
 }
+
 
 .rocketWrapper {
     position: relative;
@@ -112,3 +114,6 @@
     }
 }
 
+body{
+    background-color: black !important;
+}
