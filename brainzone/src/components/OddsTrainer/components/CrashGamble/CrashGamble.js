@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import RocketAnimation from '../RocketAnimation/RocketAnimation'
 import styles from './crashGamble.module.css'
 import rocket from '../../../../images/crashGame/rocket.png'
 import { MoneyContext } from '../../contexts/MoneyContext'
 export const CrashGamble = () => {
 
-  const {money, setMoney} = useContext(MoneyContext)
+  const {money, setMoney} = useContext(MoneyContext);
+  const [multiplier, setMultiplier] = useState(1.00);
+  const [starHeightMultiplier, setStarHeightMutliplier] = useState(3)
 
   return (
     <>
@@ -52,11 +54,11 @@ export const CrashGamble = () => {
           <div className={styles.rocketGameWrapper}>
               <div className={styles.rocketWrapper}>
               <h1>CRASH GAMBLE</h1>
-              <h2>1.00x</h2>
+              <h2>{multiplier.toFixed(2)}x</h2>
             <div className={styles.rocketDiv}>
                       {[...Array(40).keys()].map(() => {
                           let x = Math.floor(Math.random() * window.innerWidth*0.73)
-                          let h = Math.random() * 20;
+                          let h = Math.random() * starHeightMultiplier;
                           let duration = Math.random() * 2 + 1;
                           return <i style={{
                               left: `${x}px`,

@@ -8,14 +8,14 @@
   }
 
 .rocket {
-    animation: vertical-shaking 0.35s infinite;
+    animation: vertical-shaking 0.30s infinite;
 }
 
 
 
 .rocket img{
     width: 8vw;
-    height: 16vh;
+    height: 15vh;
     position: relative;
 }
 
@@ -28,7 +28,7 @@
     content: '';
     position: absolute;
     bottom: -100px;
-    left: 11.4%;
+    left: 11%;
     transform: translateX(-50%);
     width: 1vw;
     height: 100px;
