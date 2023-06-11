@@ -26,7 +26,6 @@ const RocketAnimation = ({widthPercentage, rocketDivMarginLeft, rocketStyle, tex
             <div className={styles.rocketWrapper}>
             <h1>CRASH GAMBLE</h1>
           <div ref={ref} className={styles.rocketDiv} style={{marginLeft: rocketDivMarginLeft}}>
-                    <h1>WIDTH: {width}</h1>
                     {[...Array(40).keys()].map(() => {
                         let x = Math.floor(Math.random() * width)
                         let h = Math.random() * 20;

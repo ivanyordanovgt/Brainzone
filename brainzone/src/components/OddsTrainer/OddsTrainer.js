@@ -14,7 +14,6 @@ export const OddsTrainer = () => {
                 <h1>where the multiplier increases until it suddenly crashes and all bets are lost</h1>
                 <h2>MID-RISK</h2>
             </div>
-            <button onClick={() => console.log(Math.round(window.devicePixelRatio * 100))}></button>
         </div>
 
         <ChooseCardAnimation>
