@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import RocketAnimation from '../RocketAnimation/RocketAnimation'
 import styles from './crashGamble.module.css'
 import rocket from '../../../../images/crashGame/rocket.png'
@@ -15,11 +15,21 @@ export const CrashGamble = () => {
   const [multiplier, setMultiplier] = useState(1.00);
   const [starHeightMultiplier, setStarHeightMutliplier] = useState(3)
   const [starAnimationDuration, setStarAnimationDuration] = useState(starSpeed.slow)
-  const [rocketMargin, setRocketMargin] = useState(60)
+  const [rocketMargin, setRocketMargin] = useState(60);
+  const [multiplierResultMessage, setMultiplierResultMessage] = useState('')
 
-  function startCrash() {
+
+  useEffect(() => {
+    console.log(`Money changed to ${money} :)`, multiplierResultMessage)
+  }, [money, multiplierResultMessage])
+
+  function startCrash(betInput) {
+    setMultiplierResultMessage('')
+    setMoney(state => state - betInput)
     let timeOut = 500;
-
+    let timeOutBonus = 300;
+    setStarAnimationDuration(starSpeed.slow)
+    setStarHeightMutliplier(3)
     for (let i=0; i < 7; i++) {
       setTimeout(() => {
         console.log("CYCLE")
@@ -30,15 +40,25 @@ export const CrashGamble = () => {
       timeOut += 500;
     }
 
+
+
     const crashEnd = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
-    timeOut = 300
-    for (let i = 101; i < crashEnd; i++) {
+    timeOut = 300;
+    let count = 0;
+    const multiplierResult = crashEnd/300;
+    for (let i = 1; i < crashEnd; i++) {
       setTimeout(() => {
-        setMultiplier(i/100)
+        setMultiplier(i/300)
       }, timeOut)
-      timeOut += 300;
+      timeOut += 30;
     }
 
+    setTimeout(() => {
+      console.log("!", multiplierResult)
+      setMoney(state => state + (betInput*multiplierResult))
+      setMultiplierResultMessage(`You ${multiplierResult > 1 ? 'won': 'lost'} ${(betInput-(betInput*multiplierResult)).toFixed(0)}$`)
+      console.log(`${money} + ${betInput}*${multiplierResult}`)
+    }, timeOut)
     
   };
 
@@ -54,7 +74,10 @@ export const CrashGamble = () => {
           <div className={styles.rocketGameWrapper}>
               <div className={styles.rocketWrapper}>
               <h1>CRASH GAMBLE</h1>
-              <h2 className={styles.betMultiplierNum}>{multiplier.toFixed(2)}x</h2>
+              <h2 className={styles.betMultiplierNum}>
+                <span className={multiplier > 1 ? styles.win: styles.lose}>
+                  {!multiplierResultMessage ? `${multiplier.toFixed(3)}x`: multiplierResultMessage}
+                  </span></h2>
               
             <div className={styles.rocketDiv}>
                       <StarAnimation starAnimationDuration={starAnimationDuration} starHeightMultiplier={starHeightMultiplier}></StarAnimation>

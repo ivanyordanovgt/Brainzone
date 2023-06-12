@@ -10,7 +10,7 @@ const BetMenu = ({money, startCrash}) => {
   return (
     <>
         <div className={styles.crashGambleInfo}>
-        <h1>BALANCE: {money}$</h1>
+        <h1>BALANCE: {money.toFixed(0)}$</h1>
     </div>
 
     <div className={styles.betMenu}>
@@ -21,7 +21,7 @@ const BetMenu = ({money, startCrash}) => {
         <div className={styles.placeBet}>
         
         <img src='https://img.icons8.com/?size=512&id=13013&format=png' className={styles.moneyImg}></img>
-        <input type='number' min={0} placeholder='0.00' className={styles.betAmount} value={betAmount} onChange={(e) => setBetAmount(e.target.value)}></input>
+        <input type='number' min={10} placeholder='0.00' className={styles.betAmount} value={betAmount} onChange={(e) => setBetAmount(e.target.value)}></input>
         
         </div>
 
@@ -38,7 +38,7 @@ const BetMenu = ({money, startCrash}) => {
             
         </div>
 
-        <button className={styles.placeBetBtn} onClick={startCrash}>Bet (Next Round)</button>
+        <button className={styles.placeBetBtn} onClick={() => startCrash(betAmount)}>Bet (Next Round)</button>
         <div className={styles.betHitsory}>
         <h2>progkitten <span className={styles.multiplierSpan}>1.54x</span> <span className={styles.win}>BGN$1,923.3</span></h2>
         {[...Array(17).keys()].map(() => <>
