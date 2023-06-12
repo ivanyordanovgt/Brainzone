@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const StarAnimation = ({starHeightMultiplier, starAnimationDuration}) => {
+const StarAnimation = memo(({starHeightMultiplier, starAnimationDuration}) => {
   return (
     <>
     {[...Array(40).keys()].map(() => {
@@ -16,6 +16,6 @@ const StarAnimation = ({starHeightMultiplier, starAnimationDuration}) => {
         }}></i>
     })}
   </>)
-}
+})
 
 export default StarAnimation
